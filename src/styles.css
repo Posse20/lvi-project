@@ -3,4 +3,6 @@
 
 html, body {
   font-family: "Winky Rough", sans-serif !important;
+  margin: 0;
+  overflow-x: hidden;
 }
