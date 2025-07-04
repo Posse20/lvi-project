@@ -1,7 +1,46 @@
-<body class="bg-light">
-    <div class="container-fluid d-flex align-items-center justify-content-center gap-6">
-        <h1 class="mt-3">
-          Sobre la artista
-        </h1>
+<div class="grid-container">
+  <a class="grid-item" [routerLink]="['/ilustrations']">
+    <img src="assets/ilustration-1.png" alt="Ilustraciones" />
+    <div class="overlay">
+      <div class="overlay-content">
+        <h2>Ilustraciones</h2>
+      </div>
     </div>
-</body>
+  </a>
+
+  <a class="grid-item" [routerLink]="['/pictures']">
+    <img src="assets/Logo.png" alt="Pictures" />
+    <div class="overlay">
+      <div class="overlay-content">
+        <h2>Fotografias</h2>
+      </div>
+    </div>
+  </a>
+
+  <a class="grid-item" [routerLink]="['/escritos']">
+    <img src="assets/Logo.png" alt="Escritos" />
+    <div class="overlay">
+      <div class="overlay-content">
+        <h2>Escritos</h2>
+      </div>
+    </div>
+  </a>
+
+  <a class="grid-item" [routerLink]="['/']">
+    <img src="assets/Logo.png" alt="Comics" />
+    <div class="overlay">
+      <div class="overlay-content">
+        <h2>Comics</h2>
+      </div>
+    </div>
+  </a>
+
+  <a class="grid-item" [routerLink]="['/']">
+    <img src="assets/Logo.png" alt="Artista" />
+    <div class="overlay">
+      <div class="overlay-content">
+        <h2>Sobre la Artista</h2>
+      </div>
+    </div>
+  </a>
+</div>
