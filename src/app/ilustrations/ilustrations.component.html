@@ -2,21 +2,97 @@
   <h2 class="gallery-title">Ilustraciones</h2>
 
   <div class="gallery-grid">
-    <div class="gallery-item wide">
-      <img src="assets/ilustration-1.png" alt="Ilustración 1" />
+    <div class="gallery-item wide" (click)="openImage('assets/ilus-9.png')">
+      <img src="assets/ilus-9.png" alt="Ilustración 1" />
     </div>
-    <div class="gallery-item tall">
-      <img src="assets/ilustration-2.png" alt="Ilustración 2" />
+    <div class="gallery-item tall" (click)="openImage('assets/ilus-8.png')">
+      <img src="assets/ilus-8.png" alt="Ilustración 2" />
     </div>
-    <div class="gallery-item">
-      <img src="assets/Logo.png" alt="Ilustración 3" />
+    <div class="gallery-item" (click)="openImage('assets/ilus-2.png')">
+      <img src="assets/ilus-2.png" alt="Ilustración 3" />
     </div>
-    <div class="gallery-item wide tall">
-      <img src="assets/ilustration-1.png" alt="Ilustración 4" />
+    <div class="gallery-item wide tall" (click)="openImage('assets/ilus-5.png')">
+      <img src="assets/ilus-5.png" alt="Ilustración 4" />
     </div>
-    <div class="gallery-item">
-      <img src="assets/lvi-ilustration-home.png" alt="Ilustración 5" />
+    <div class="gallery-item" (click)="openImage('assets/ilus-3.png')">
+      <img src="assets/ilus-3.png" alt="Ilustración 5" />
+    </div>
+    <div class="gallery-item wide tall" (click)="openImage('assets/ilus-1.png')">
+      <img src="assets/ilus-1.png" alt="Ilustración 6" />
+    </div>
+    <div class="gallery-item" (click)="openImage('assets/ilus-4.png')">
+      <img src="assets/ilus-4.png" alt="Ilustración 7" />
+    </div>
+    <div class="gallery-item" (click)="openImage('assets/ilus-6.png')">
+      <img src="assets/ilus-6.png" alt="Ilustración 8" />
+    </div>
+    <div class="gallery-item wide" (click)="openImage('assets/ilus-7.png')">
+      <img src="assets/ilus-7.png" alt="Ilustración 9" />
+    </div>
+    <div class="gallery-item wide" (click)="openImage('assets/ilus-10.png')">
+      <img src="assets/ilus-10.png" alt="Ilustración 10" />
+    </div>
+    <div class="gallery-item wide tall" (click)="openImage('assets/ilus-11.png')">
+      <img src="assets/ilus-11.png" alt="Ilustración 11" />
+    </div>
+    <div class="gallery-item wide" (click)="openImage('assets/ilus-12.png')">
+      <img src="assets/ilus-12.png" alt="Ilustración 12" />
+    </div>
+    <div class="gallery-item wide" (click)="openImage('assets/ilus-13.png')">
+      <img src="assets/ilus-13.png" alt="Ilustración 13" />
+    </div>
+    <div class="gallery-item" (click)="openImage('assets/ilus-14.png')">
+      <img src="assets/ilus-14.png" alt="Ilustración 14" />
+    </div>
+    <div class="gallery-item wide tall" (click)="openImage('assets/ilus-15.png')">
+      <img src="assets/ilus-15.png" alt="Ilustración 15" />
+    </div>
+    <div class="gallery-item tall" (click)="openImage('assets/ilus-16.png')">
+      <img src="assets/ilus-16.png" alt="Ilustración 16" />
+    </div>
+    <div class="gallery-item" (click)="openImage('assets/ilus-17.png')">
+      <img src="assets/ilus-17.png" alt="Ilustración 17" />
+    </div>
+    <div class="gallery-item wide" (click)="openImage('assets/ilus-18.png')">
+      <img src="assets/ilus-18.png" alt="Ilustración 18" />
+    </div>
+    <div class="gallery-item tall" (click)="openImage('assets/ilus-19.png')">
+      <img src="assets/ilus-19.png" alt="Ilustración 19" />
+    </div>
+    <div class="gallery-item tall wide" (click)="openImage('assets/ilus-20.png')">
+      <img src="assets/ilus-20.png" alt="Ilustración 20" />
+    </div>
+    <div class="gallery-item wide" (click)="openImage('assets/ilus-21.png')">
+      <img src="assets/ilus-21.png" alt="Ilustración 21" />
+    </div>
+    <div class="gallery-item" (click)="openImage('assets/ilus-22.png')">
+      <img src="assets/ilus-22.png" alt="Ilustración 22" />
+    </div>
+    <div class="gallery-item" (click)="openImage('assets/ilus-23.png')">
+      <img src="assets/ilus-23.png" alt="Ilustración 23" />
+    </div>
+    <div class="gallery-item wide tall" (click)="openImage('assets/ilus-24.png')">
+      <img src="assets/ilus-24.png" alt="Ilustración 24" />
+    </div>
+    <div class="gallery-item tall" (click)="openImage('assets/ilus-25.png')">
+      <img src="assets/ilus-25.png" alt="Ilustración 25" />
+    </div>
+    <div class="gallery-item tall wide" (click)="openImage('assets/ilus-26.png')">
+      <img src="assets/ilus-26.png" alt="Ilustración 26" />
     </div>
     <!-- Agrega más ilustraciones según necesites -->
   </div>
+
+  <!-- Overlay para imagen ampliada -->
+  <ng-container *ngIf="selectedImage" >
+    <div class="lightbox" (click)="closeImage()">
+      <img
+        class="lightbox-image"
+        [src]="selectedImage"
+        alt="Ilustración ampliada"
+        (click)="$event.stopPropagation()"
+      />
+    </div>
+  </ng-container>
+
 </section>
