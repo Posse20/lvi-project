@@ -1,7 +1,7 @@
 <section>
     <h2 class="comic-title">Comics</h2>
     <div class="comic-content">
-        <div class="grid-item">
+        <div class="grid-item" (click)="openComic(0)">
             <img src="assets/comic-1.png" alt="Comic" />
             <div class="overlay">
               <div class="overlay-content">
@@ -10,4 +10,15 @@
             </div>
         </div>
     </div>
+
+    <ng-container *ngIf="selectedComic as comic">
+      <div class="comic-lightbox" (click)="closeComic()">
+        <div class="comic-viewer" (click)="$event.stopPropagation()">
+          <img [src]="comic.pages[currentPage]" alt="Página del cómic" />
+          <button class="nav-button left" (click)="prevPage($event)"><i class="fas fa-chevron-left"></i></button>
+          <button class="nav-button right" (click)="nextPage($event)"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </ng-container>
+  
 </section>
