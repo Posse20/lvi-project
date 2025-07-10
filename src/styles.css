@@ -6,3 +6,31 @@ html, body {
   margin: 0;
   overflow-x: hidden;
 }
+
+.app-container {
+  display: flex;
+}
+
+/* Mueve el contenido principal a la derecha para dejar espacio al menú */
+.main-content {
+  margin-left: 260px;
+  width: calc(100% - 260px);
+}
+
+/* RESPONSIVE: En móviles, ocultar el menú lateral por defecto */
+@media (max-width: 768px) {
+  .bg-header {
+    position: fixed;
+    left: -260px;
+    transition: left 0.3s ease-in-out;
+  }
+
+  .bg-header.active {
+    left: 0;
+  }
+
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+}
