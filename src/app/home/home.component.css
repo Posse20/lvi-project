@@ -5,6 +5,20 @@
   padding: 2rem;
 }
 
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-item {
+    aspect-ratio: 4 / 3; /* más horizontal, menos cuadrado */
+  }
+}
+
 .grid-item {
   position: relative;
   overflow: hidden;
