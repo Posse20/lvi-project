@@ -79,22 +79,23 @@
     justify-content: center;
     align-items: center;
     z-index: 999;
-  }
+}
   
-  .comic-viewer {
+.comic-viewer {
     position: relative;
     max-width: 90%;
     max-height: 90%;
-  }
+    margin-bottom: 40px;
+}
   
-  .comic-viewer img {
+.comic-viewer img {
     max-width: 100%;
     max-height: 100%;
     display: block;
     border-radius: 8px;
-  }
+}
   
-  .nav-button {
+.nav-button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
