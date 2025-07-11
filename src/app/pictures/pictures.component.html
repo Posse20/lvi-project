@@ -1,3 +1,8 @@
 <section>
   <h2 class="headers-title">Fotografias</h2>
+  <div class="carousel-container">
+    <button (click)="prevImage()" class="nav-btn"><i class="fas fa-chevron-left"></i></button>
+    <img [src]="images[currentIndex]" alt="Fotografía" class="carousel-image" />
+    <button (click)="nextImage()" class="nav-btn"><i class="fas fa-chevron-right"></i></button>
+  </div>
 </section>
