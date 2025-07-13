@@ -5,9 +5,11 @@ const app = express();
 const port = process.env.PORT || 8080;
 const distPath = path.join(__dirname, 'dist/lvi-project');
 
+// Servir archivos estáticos
 app.use(express.static(distPath));
 
-app.get('*', (req, res) => {
+// Para cualquier otra ruta, servir index.html
+app.get('/*', function (req, res) {
   res.sendFile(path.join(distPath, 'index.html'));
 });
 
