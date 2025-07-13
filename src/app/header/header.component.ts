@@ -1,5 +1,5 @@
-import { Component, Input } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Component, Input, inject } from '@angular/core';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   standalone: true,
@@ -9,6 +9,12 @@ import { RouterModule } from '@angular/router';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
+
+  private _router = inject(Router);
   @Input() isMenuOpen: boolean = false;
+
+  goHome(){
+    this._router.navigate(['/']);
+  }
 
 }

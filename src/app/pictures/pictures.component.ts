@@ -1,8 +1,9 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-pictures',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './pictures.component.html',
   styleUrl: './pictures.component.css'
 })
@@ -26,12 +27,24 @@ export class PicturesComponent {
     'assets/picture-16.jpeg',
   ];
   currentIndex = 0;
+  selectedImage: string | null = null;
 
   nextImage() {
+    this.selectedImage = null;
     this.currentIndex = (this.currentIndex + 1) % this.images.length;
   }
 
   prevImage() {
+    this.selectedImage = null;
     this.currentIndex = (this.currentIndex - 1 + this.images.length) % this.images.length;
+  }
+
+  openImage(imageUrl: string): void {
+    console.log(imageUrl);
+    this.selectedImage = imageUrl;
+  }
+
+  closeImage(): void {
+    this.selectedImage = null;
   }
 }

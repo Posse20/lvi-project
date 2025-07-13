@@ -2,7 +2,18 @@
   <h2 class="headers-title">Fotografias</h2>
   <div class="carousel-container">
     <button (click)="prevImage()" class="nav-btn"><i class="fas fa-chevron-left"></i></button>
-    <img [src]="images[currentIndex]" alt="Fotografía" class="carousel-image" />
+    <img [src]="images[currentIndex]" alt="Fotografía" class="carousel-image" (click)="openImage(images[currentIndex])"/>
     <button (click)="nextImage()" class="nav-btn"><i class="fas fa-chevron-right"></i></button>
   </div>
+  <!-- Overlay para imagen ampliada -->
+  <ng-container *ngIf="selectedImage" >
+    <div class="lightbox" (click)="closeImage()">
+      <img
+        class="lightbox-image"
+        [src]="selectedImage"
+        alt="Ilustración ampliada"
+        (click)="$event.stopPropagation()"
+      />
+    </div>
+  </ng-container>
 </section>

@@ -4,6 +4,7 @@
     align-items: flex-start;
     gap: 5rem;
     margin-top: 2rem;
+    margin-left: 80px;
     flex-wrap: wrap;
 }
 
@@ -24,4 +25,32 @@
     line-height: 1.8;
     font-weight: normal;
     color: #222;
+}
+
+.contact-button-container {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+  
+.whatsapp-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #25d366;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+  
+.whatsapp-button:hover {
+    background-color: #1ebe57;
+}
+
+.fab.fa-whatsapp {
+    font-size: 24px;
 }
