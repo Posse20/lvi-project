@@ -1,5 +1,5 @@
 <div class="app-container">
-  <app-header [isMenuOpen]="menuOpen"></app-header>
+  <app-header (toggleMenu)="menuOpen = !menuOpen" [isMenuOpen]="menuOpen"></app-header>
   <button class="menu-toggle" (click)="menuOpen = !menuOpen">☰</button>
   <main class="main-content">
     <router-outlet></router-outlet>

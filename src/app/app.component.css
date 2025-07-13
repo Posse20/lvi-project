@@ -19,7 +19,6 @@
 
 app-header {
   width: 250px;
-  flex-shrink: 0;
 }
 
 .main-content {

@@ -33,6 +33,43 @@
 
 /* Navegación */
 
+.hamburger {
+    display: none;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    z-index: 999;
+}
+  
+nav {
+    transition: transform 0.3s ease;
+}
+  
+@media screen and (max-width: 768px) {
+    .hamburger {
+      display: block;
+    }
+  
+    nav {
+      transform: translateX(-100%);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 250px;
+      height: 100%;
+      background-color: #e0eaea; /* ajusta según tu diseño */
+      z-index: 998;
+    }
+  
+    nav.open {
+      transform: translateX(0);
+    }
+}
+  
+
 .nav-items{
     margin-top: 2.5rem;
     display: flex;

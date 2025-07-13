@@ -17,4 +17,8 @@ export class HeaderComponent {
     this._router.navigate(['/']);
   }
 
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
 }
