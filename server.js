@@ -3,7 +3,7 @@ const path = require('path');
 const app = express();
 
 const port = process.env.PORT || 8080;
-const distPath = path.join(__dirname, 'dist/lvi-project');
+const distPath = path.join(__dirname, 'dist/lvi-project/browser');
 
 // Servir archivos estáticos
 app.use(express.static(distPath));
