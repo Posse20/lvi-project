@@ -16,6 +16,8 @@
             "outputPath": "dist/lvi-project",
             "index": "src/index.html",
             "browser": "src/main.ts",
+            "inlineStyleLanguage": "css",
+            "inlineFonts": false,
             "polyfills": [
               "zone.js"
             ],
